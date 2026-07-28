@@ -1,8 +1,8 @@
-<?php
+﻿<?php
 session_start();
 
 if (!isset($_SESSION['role']) || $_SESSION['role'] !== 'admin') {
-    header('Location: /~uapv2600350/admin/login');
+    header('Location: /admin/login');
     exit;
 }
 

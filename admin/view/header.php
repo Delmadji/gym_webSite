@@ -1,4 +1,4 @@
-<?php
+﻿<?php
 require_once __DIR__ . "/../../model/CookieManager.php";
 require_once __DIR__ . "/../interface/UtilisateurInterface.php";
 require_once __DIR__ . "/../class/Utilisateur.php";
@@ -36,22 +36,23 @@ if (isset($_SESSION['user_id'], $_SESSION['role']) && $_SESSION['role'] === 'adm
 <body class="bg-black text-white">
 <nav class="fixed top-0 left-0 right-0 z-50 bg-black/80 backdrop-blur border-b border-white/10">
   <div class="max-w-6xl mx-auto px-6 py-4 flex items-center justify-between">
-    <a href="/~uapv2600350/admin/dashboard" class="font-extrabold uppercase tracking-wider">
+    <a href="/admin/dashboard" class="font-extrabold uppercase tracking-wider">
   Admin PowerGym
 </a>
     <div class="flex gap-4 text-sm uppercase items-center">
-<a href="/~uapv2600350/admin/dashboard" class="text-white/70 hover:text-lime-400">Dashboard</a>
-<a href="/~uapv2600350/admin/coachs" class="text-white/70 hover:text-lime-400">Coachs</a>
-<a href="/~uapv2600350/admin/activites" class="text-white/70 hover:text-lime-400">Activités</a>
-<a href="/~uapv2600350/admin/abonnements" class="text-white/70 hover:text-lime-400">Abonnements</a>
-<a href="/~uapv2600350/admin/utilisateurs" class="text-white/70 hover:text-lime-400">Utilisateurs</a>
-<a href="/~uapv2600350/accueil" class="px-3 py-2 rounded-full bg-lime-500 text-black font-bold">Site</a>
+<a href="/admin/dashboard" class="text-white/70 hover:text-lime-400">Dashboard</a>
+<a href="/admin/coachs" class="text-white/70 hover:text-lime-400">Coachs</a>
+<a href="/admin/activites" class="text-white/70 hover:text-lime-400">ActivitÃ©s</a>
+<a href="/admin/abonnements" class="text-white/70 hover:text-lime-400">Abonnements</a>
+<a href="/admin/utilisateurs" class="text-white/70 hover:text-lime-400">Utilisateurs</a>
+<a href="/accueil" class="px-3 py-2 rounded-full bg-lime-500 text-black font-bold">Site</a>
 <?php if ($adminUtilisateur): ?>
 <span class="px-3 py-2 rounded-full border border-lime-500 text-lime-400 font-bold">
   <?= htmlspecialchars($adminUtilisateur->getNom()) ?>
 </span>
-<a href="/~uapv2600350/admin/deconnexion" class="px-3 py-2 rounded-full border border-white/20 text-white/80 hover:border-red-400 hover:text-red-400 font-bold">Déconnexion</a>
+<a href="/admin/deconnexion" class="px-3 py-2 rounded-full border border-white/20 text-white/80 hover:border-red-400 hover:text-red-400 font-bold">DÃ©connexion</a>
 <?php endif; ?>
     </div>
   </div>
 </nav>
+

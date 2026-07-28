@@ -1,4 +1,4 @@
-<?php
+﻿<?php
 if (session_status() === PHP_SESSION_NONE) {
     session_start();
 }
@@ -20,5 +20,6 @@ if (ini_get('session.use_cookies')) {
 
 session_destroy();
 
-header('Location: /~uapv2600350/accueil');
+header('Location: /accueil');
 exit;
+

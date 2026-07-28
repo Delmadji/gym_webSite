@@ -1,4 +1,4 @@
-<?php
+﻿<?php
 /**
  * Add Activity Controller
  *
@@ -13,7 +13,7 @@
 session_start();
 
 if (!isset($_SESSION['role']) || $_SESSION['role'] !== 'admin') {
-    header('Location: /~uapv2600350/admin/login');
+    header('Location: /admin/login');
     exit;
 }
 
@@ -52,7 +52,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $model = new ActiviteModel();
     $model->insert($activite);
 
-    header('Location: /~uapv2600350/admin/activites');
+    header('Location: /admin/activites');
     exit;
 }
 

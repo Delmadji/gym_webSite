@@ -1,4 +1,4 @@
-<?php
+﻿<?php
 /**
  * Admin Login Controller
  *
@@ -46,7 +46,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             $_SESSION['user_id'] = $user->getId();
             $_SESSION['role'] = $user->getRole();
 
-           header('Location: /~uapv2600350/admin/dashboard');
+           header('Location: /admin/dashboard');
             exit;
         } else {
             $erreur = "Email ou mot de passe incorrect.";
@@ -58,3 +58,4 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 }
 
 require __DIR__ . '/../view/login.php';
+

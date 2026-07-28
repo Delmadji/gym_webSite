@@ -1,4 +1,4 @@
-<?php require __DIR__ . "/header.php"; 
+﻿<?php require __DIR__ . "/header.php"; 
 require_once __DIR__ . "/../model/Csrf.php";
 use Model\Csrf;
 ?>
@@ -10,7 +10,7 @@ use Model\Csrf;
     <h1 class="text-3xl font-extrabold uppercase mb-6">Modifier un utilisateur</h1>
 
     <?php if ($utilisateur): ?>
-      <form action="/~uapv2600350/admin/editUtilisateur" method="post"
+      <form action="/admin/editUtilisateur" method="post"
             class="bg-gray-900 border border-white/10 rounded-xl p-6 space-y-4">
           <input type="hidden" name="csrf_token" value="<?= htmlspecialchars(Csrf::generateToken()) ?>">
         <input type="hidden" name="id" value="<?= htmlspecialchars($utilisateur->getId()) ?>">
@@ -24,14 +24,14 @@ use Model\Csrf;
         <input type="email" name="email" value="<?= htmlspecialchars($utilisateur->getEmail()) ?>"
                class="w-full px-4 py-3 rounded-lg bg-black/40 border border-white/10" required>
 
-        <input type="password" name="password" placeholder="Nouveau mot de passe (laisser vide si inchangé)"
+        <input type="password" name="password" placeholder="Nouveau mot de passe (laisser vide si inchangÃ©)"
                class="w-full px-4 py-3 rounded-lg bg-black/40 border border-white/10">
 
         <input type="text" name="telephone" value="<?= htmlspecialchars($utilisateur->getTelephone()) ?>"
                class="w-full px-4 py-3 rounded-lg bg-black/40 border border-white/10" required>
 
         <div>
-          <label class="block text-sm text-white/70 mb-1">Rôle</label>
+          <label class="block text-sm text-white/70 mb-1">RÃ´le</label>
           <select name="role" id="role"
                   class="w-full px-4 py-3 rounded-lg bg-black/40 border border-white/10" required>
             <option value="admin" <?= $utilisateur->getRole() === 'admin' ? 'selected' : '' ?>>Admin</option>
@@ -40,7 +40,7 @@ use Model\Csrf;
         </div>
 
         <div id="abonnementBlock">
-          <label class="block text-sm text-white/70 mb-1">Nom de l’abonnement</label>
+          <label class="block text-sm text-white/70 mb-1">Nom de lâ€™abonnement</label>
           <input type="text" name="abonnement_nom" id="abonnement_nom"
                  value="<?= htmlspecialchars((string)$utilisateur->getAbonnementNom()) ?>"
                  class="w-full px-4 py-3 rounded-lg bg-black/40 border border-white/10">

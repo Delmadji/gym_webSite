@@ -1,4 +1,4 @@
-<?php require __DIR__ . "/header.php"; ?>
+﻿<?php require __DIR__ . "/header.php"; ?>
 <?php
 require_once __DIR__ . "/../model/Csrf.php";
 use Model\Csrf;
@@ -11,13 +11,13 @@ use Model\Csrf;
     <div class="bg-gray-900 border border-white/10 rounded-xl p-6">
       <?php if ($abonnement): ?>
         <p class="text-white/80 mb-6">
-          Voulez-vous vraiment supprimer l’abonnement
+          Voulez-vous vraiment supprimer lâ€™abonnement
           <span class="font-bold text-red-400">
             <?= htmlspecialchars($abonnement->getNom()) ?>
           </span> ?
         </p>
 
-        <form action="/~uapv2600350/admin/deleteAbonnement" method="post" class="flex gap-4">
+        <form action="/admin/deleteAbonnement" method="post" class="flex gap-4">
           <input type="hidden" name="csrf_token" value="<?= htmlspecialchars(Csrf::generateToken()) ?>">
           <input type="hidden" name="id" value="<?= htmlspecialchars($abonnement->getId()) ?>">
 
@@ -26,7 +26,7 @@ use Model\Csrf;
             Supprimer
           </button>
 
-          <a href="/~uapv2600350/admin/abonnements"
+          <a href="/admin/abonnements"
              class="px-6 py-3 border border-white/20 rounded-full uppercase hover:border-lime-400 transition">
             Annuler
           </a>
@@ -34,7 +34,7 @@ use Model\Csrf;
       <?php else: ?>
         <p class="text-red-400">Abonnement introuvable.</p>
 
-        <a href="/~uapv2600350/admin/abonnements"
+        <a href="/admin/abonnements"
            class="inline-block mt-4 px-6 py-3 border border-white/20 rounded-full uppercase hover:border-lime-400 transition">
           Retour
         </a>
@@ -44,3 +44,4 @@ use Model\Csrf;
 </main>
 
 <?php require __DIR__ . "/footer.php"; ?>
+

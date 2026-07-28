@@ -1,4 +1,4 @@
-<?php require __DIR__ . "/header.php"; ?>
+﻿<?php require __DIR__ . "/header.php"; ?>
 
 <?php
 require_once __DIR__ . "/../model/Csrf.php";
@@ -19,7 +19,7 @@ use Model\Csrf;
       </p>
 
 
-      <form action="/~uapv2600350/admin/deleteUtilisateur" method="post" class="flex gap-4">
+      <form action="/admin/deleteUtilisateur" method="post" class="flex gap-4">
 
         <input type="hidden" name="csrf_token" value="<?= htmlspecialchars(Csrf::generateToken()) ?>">
         <input type="hidden" name="id" value="<?= htmlspecialchars($utilisateur->getId()) ?>">
@@ -31,7 +31,7 @@ use Model\Csrf;
         </button>
 
         
-        <a href="/~uapv2600350/admin/utilisateurs"
+        <a href="/admin/utilisateurs"
            class="px-6 py-3 bg-gray-700 text-white font-bold uppercase rounded-full hover:bg-gray-600 transition">
           Annuler
         </a>

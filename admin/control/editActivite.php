@@ -1,4 +1,4 @@
-<?php
+﻿<?php
 /**
  * Edit Activity Controller
  *
@@ -13,7 +13,7 @@
 session_start();
 
 if (!isset($_SESSION['role']) || $_SESSION['role'] !== 'admin') {
-    header('Location: /~uapv2600350/admin/login');
+    header('Location: /admin/login');
     exit;
 }
 require_once __DIR__ . "/../model/Csrf.php";
@@ -46,7 +46,7 @@ if (!Csrf::verifyToken($_POST['csrf_token'] ?? null)) {
 
     $model->update($activite);
 
-    header('Location: /~uapv2600350/admin/activites');
+    header('Location: /admin/activites');
     exit;
 }
 

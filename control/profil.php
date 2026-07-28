@@ -1,4 +1,4 @@
-<?php
+﻿<?php
 /**
  * User Profile Controller
  *
@@ -22,7 +22,7 @@ if (session_status() === PHP_SESSION_NONE) {
 }
 
 if (!isset($_SESSION['user_id'])) {
-    header('Location: /~uapv2600350/login');
+    header('Location: /login');
     exit;
 }
 
@@ -36,3 +36,4 @@ if (!$utilisateur) {
 }
 
 require __DIR__ . '/../view/profil.php';
+

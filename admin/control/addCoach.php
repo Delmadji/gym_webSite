@@ -1,4 +1,4 @@
-<?php
+﻿<?php
 /**
  * Add Coach Controller
  *
@@ -13,7 +13,7 @@
 session_start();
 
 if (!isset($_SESSION['role']) || $_SESSION['role'] !== 'admin') {
-    header('Location: /~uapv2600350/admin/login');
+    header('Location: /admin/login');
     exit;
 }
 
@@ -45,7 +45,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $coachModel = new CoachModel();
     $coachModel->insert($coach);
 
-    header('Location: /~uapv2600350/admin/coachs');
+    header('Location: /admin/coachs');
     exit;
 }
 

@@ -1,4 +1,4 @@
-<?php
+﻿<?php
 require_once __DIR__ . "/../model/CookieManager.php";
 require_once __DIR__ . "/../admin/interface/UtilisateurInterface.php";
 require_once __DIR__ . "/../admin/class/Utilisateur.php";
@@ -41,7 +41,7 @@ if (!isset($utilisateur) && isset($_SESSION['user_id'])) {
     <div class="flex flex-col md:flex-row items-center justify-between py-4 gap-4">
 
       <!-- Logo -->
-      <a href="/~uapv2600350/accueil"
+      <a href="/accueil"
          class="flex items-center gap-2 font-extrabold text-xl tracking-wider">
 
         <span class="bg-lime-500 text-black px-2 py-1 rounded">
@@ -55,46 +55,46 @@ if (!isset($utilisateur) && isset($_SESSION['user_id'])) {
       <!-- Menu -->
       <div class="flex flex-col md:flex-row items-center gap-4 md:gap-8 text-sm uppercase tracking-wider">
 
-        <a href="/~uapv2600350/accueil"
+        <a href="/accueil"
            class="text-white/80 hover:text-lime-500 transition">
            Accueil
         </a>
 
-        <a href="/~uapv2600350/activites"
+        <a href="/activites"
            class="text-white/80 hover:text-lime-500 transition">
-           Activités
+           ActivitÃ©s
         </a>
 
-        <a href="/~uapv2600350/abonnements"
+        <a href="/abonnements"
            class="text-white/80 hover:text-lime-500 transition">
            Abonnements
         </a>
 
-        <a href="/~uapv2600350/faq"
+        <a href="/faq"
            class="text-white/80 hover:text-lime-500 transition">
            FAQ
         </a>
 
-        <a href="/~uapv2600350/contact"
+        <a href="/contact"
            class="text-white/80 hover:text-lime-500 transition">
            Contact
         </a>
 
         <?php if (isset($utilisateur)): ?>
 
-          <a href="/~uapv2600350/profil"
+          <a href="/profil"
              class="px-4 py-2 border border-lime-500 text-lime-400 rounded-full hover:bg-lime-500 hover:text-black transition font-bold">
             <?= htmlspecialchars($utilisateur->getNom()) ?>
           </a>
 
-          <a href="/~uapv2600350/deconnexion"
+          <a href="/deconnexion"
              class="px-4 py-2 border border-white/20 text-white/80 rounded-full hover:border-red-400 hover:text-red-400 transition font-bold">
-            Déconnexion
+            DÃ©connexion
           </a>
 
         <?php else: ?>
 
-          <a href="/~uapv2600350/login"
+          <a href="/login"
              class="px-5 py-2 bg-lime-500 text-black rounded-full font-bold hover:bg-lime-400 transition">
              Se connecter
           </a>
@@ -110,3 +110,4 @@ if (!isset($utilisateur) && isset($_SESSION['user_id'])) {
 </nav>
 
 <div class="h-20"></div>
+

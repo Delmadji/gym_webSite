@@ -1,4 +1,4 @@
-<?php
+﻿<?php
 /**
  * Delete User Controller
  *
@@ -13,7 +13,7 @@
 session_start();
 
 if (!isset($_SESSION['role']) || $_SESSION['role'] !== 'admin') {
-    header('Location: /~uapv2600350/admin/login');
+    header('Location: /admin/login');
     exit;
 }
 
@@ -36,7 +36,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $id = (int) $_POST['id'];
     $model->delete($id);
 
-    header('Location: /~uapv2600350/admin/utilisateurs');
+    header('Location: /admin/utilisateurs');
     exit;
 }
 
@@ -44,3 +44,4 @@ $id = isset($_GET['id']) ? (int) $_GET['id'] : 0;
 $utilisateur = $model->getById($id);
 
 require __DIR__ . '/../view/deleteUtilisateur.php';
+

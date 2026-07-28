@@ -1,4 +1,4 @@
-<?php
+﻿<?php
 /**
  * Edit User Controller
  *
@@ -14,7 +14,7 @@
 session_start();
 
 if (!isset($_SESSION['role']) || $_SESSION['role'] !== 'admin') {
-    header('Location: /~uapv2600350/admin/login');
+    header('Location: /admin/login');
     exit;
 }
 
@@ -69,7 +69,7 @@ $id = (int) $_POST['id'];
 
     $model->update($u);
 
-    header('Location: /~uapv2600350/admin/utilisateurs');
+    header('Location: /admin/utilisateurs');
     exit;
 }
 

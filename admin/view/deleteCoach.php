@@ -1,4 +1,4 @@
-<?php require __DIR__ . "/header.php"; ?>
+﻿<?php require __DIR__ . "/header.php"; ?>
 
 <?php
 require_once __DIR__ . "/../model/Csrf.php";
@@ -15,7 +15,7 @@ use Model\Csrf;
         <span class="font-bold text-red-400"><?= htmlspecialchars($coach->getNom()) ?></span> ?
       </p>
 
-      <form action="/~uapv2600350/admin/deleteCoach" method="post" class="flex gap-4">
+      <form action="/admin/deleteCoach" method="post" class="flex gap-4">
 
         <input type="hidden" name="csrf_token" value="<?= htmlspecialchars(Csrf::generateToken()) ?>">
 
@@ -26,7 +26,7 @@ use Model\Csrf;
           Supprimer
         </button>
 
-        <a href="/~uapv2600350/admin/coachs"
+        <a href="/admin/coachs"
            class="px-6 py-3 border border-white/20 rounded-full uppercase hover:border-lime-400 transition">
           Annuler
         </a>

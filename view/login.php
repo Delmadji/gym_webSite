@@ -1,10 +1,10 @@
-<?php require __DIR__ . "/header.php"; ?>
+﻿<?php require __DIR__ . "/header.php"; ?>
 
 <main class="pt-24">
   <div class="max-w-md mx-auto px-6">
     <h1 class="text-3xl font-extrabold uppercase mb-6">Connexion</h1>
 
-    <form action="/~uapv2600350/login" method="post"
+    <form action="/login" method="post"
           class="bg-gray-900 border border-white/10 rounded-xl p-6 space-y-4">
 
       <input type="hidden" name="csrf_token" value="<?= htmlspecialchars(\Model\Csrf::generateToken()) ?>">
@@ -26,3 +26,4 @@
     </form>
   </div>
 </main>
+

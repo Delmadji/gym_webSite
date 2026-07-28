@@ -1,4 +1,4 @@
-<?php
+﻿<?php
 /**
  * Edit Subscription Controller
  *
@@ -13,7 +13,7 @@
 session_start();
 
 if (!isset($_SESSION['role']) || $_SESSION['role'] !== 'admin') {
-    header('Location: /~uapv2600350/admin/login');
+    header('Location: /admin/login');
     exit;
 }
 
@@ -43,7 +43,7 @@ $id = (int) $_POST['id'];
     $abonnement = new Abonnement($id, $nom, $prix, $duree, $services);
     $model->update($abonnement);
 
-    header('Location: /~uapv2600350/admin/abonnements');
+    header('Location: /admin/abonnements');
     exit;
 }
 

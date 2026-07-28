@@ -1,4 +1,4 @@
-<?php
+﻿<?php
 /**
  * Login Controller
  *
@@ -42,11 +42,11 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         $_SESSION['role'] = $utilisateur->getRole();
 
         if ($utilisateur->getRole() === 'admin') {
-            header('Location: /~uapv2600350/admin/dashboard');
+            header('Location: /admin/dashboard');
             exit;
         }
 
-        header('Location: /~uapv2600350/profil');
+        header('Location: /profil');
         exit;
 
     } else {
@@ -55,3 +55,4 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 }
 
 require __DIR__ . '/../view/login.php';
+

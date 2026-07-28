@@ -1,4 +1,4 @@
-<?php
+﻿<?php
 /**
  * Delete Activity Controller
  *
@@ -13,7 +13,7 @@
 session_start();
 
 if (!isset($_SESSION['role']) || $_SESSION['role'] !== 'admin') {
-    header('Location: /~uapv2600350/admin/login');
+    header('Location: /admin/login');
     exit;
 }
 
@@ -36,13 +36,14 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $id = isset($_POST['id']) ? (int) $_POST['id'] : 0;
     $model->delete($id);
 
-    header('Location: /~uapv2600350/admin/activites');
+    header('Location: /admin/activites');
     exit;
 }
 
 $id = isset($_GET['id']) ? (int) $_GET['id'] : 0;
 
-echo "ID reçu = " . $id; // test temporaire
+echo "ID reÃ§u = " . $id; // test temporaire
 $activite = $model->getById($id);
 
 require __DIR__ . '/../view/deleteActivite.php';
+

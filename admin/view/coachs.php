@@ -1,4 +1,4 @@
-<?php require __DIR__ . "/header.php"; ?>
+﻿<?php require __DIR__ . "/header.php"; ?>
 
 <main class="pt-24">
   <div class="max-w-6xl mx-auto px-6">
@@ -8,7 +8,7 @@
         <h1 class="text-3xl font-extrabold uppercase">Gestion des coachs</h1>
       </div>
 
-      <a href="/~uapv2600350/admin/addCoach"
+      <a href="/admin/addCoach"
          class="inline-block px-5 py-3 rounded-full bg-lime-500 text-black font-bold uppercase hover:bg-lime-300 transition">
         + Ajouter un coach
       </a>
@@ -22,7 +22,7 @@
               <th class="text-left p-4">ID</th>
               
               <th class="text-left p-4">Nom</th>
-              <th class="text-left p-4">Spécialité</th>
+              <th class="text-left p-4">SpÃ©cialitÃ©</th>
               <th class="text-left p-4">Description</th>
               <th class="text-left p-4">Actions</th>
             </tr>
@@ -52,12 +52,12 @@
                 <td class="p-4">
                   <div class="flex gap-2 flex-wrap">
 
-                    <a href="/~uapv2600350/admin/editCoach?id=<?= urlencode($c->getId()) ?>"
+                    <a href="/admin/editCoach?id=<?= urlencode($c->getId()) ?>"
                        class="px-3 py-2 rounded-lg border border-white/20 hover:border-lime-400 transition uppercase text-xs">
                       Modifier
                     </a>
 
-                    <a href="/~uapv2600350/admin/deleteCoach?id=<?= urlencode($c->getId()) ?>"
+                    <a href="/admin/deleteCoach?id=<?= urlencode($c->getId()) ?>"
                        class="px-3 py-2 rounded-lg border border-red-400/40 hover:border-red-400 transition uppercase text-xs">
                       Supprimer
                     </a>

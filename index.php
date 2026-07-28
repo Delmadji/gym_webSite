@@ -1,4 +1,5 @@
-<?php
+﻿<?php
 
-header("Location: /~uapv2600350/accueil");
+header("Location: /accueil");
 exit;
+

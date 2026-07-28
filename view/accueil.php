@@ -1,7 +1,7 @@
-<?php require __DIR__ . "/header.php"; ?>
+﻿<?php require __DIR__ . "/header.php"; ?>
 
 <section class="min-h-screen bg-cover bg-center relative"
-         style="background-image: url('/~uapv2600350/images/hero.jpg')">
+         style="background-image: url('/images/hero.jpg')">
   <div class="absolute inset-0 bg-black/60"></div>
 
   <div class="relative z-10 min-h-screen flex flex-col items-center justify-center text-center px-6">
@@ -10,16 +10,16 @@
     </h1>
 
     <p class="mt-6 max-w-xl text-white/75">
-      Musculation, coaching et cours collectifs avec une équipe experte.
+      Musculation, coaching et cours collectifs avec une Ã©quipe experte.
     </p>
 
     <div class="mt-8 flex gap-4 flex-wrap justify-center">
-      <a href="/~uapv2600350/abonnements"
+      <a href="/abonnements"
          class="px-6 py-3 rounded-full bg-lime-500 hover:bg-lime-300 text-black font-bold uppercase">
         Commencer
       </a>
 
-      <a href="/~uapv2600350/activites"
+      <a href="/activites"
          class="text-white hover:text-black px-6 py-3 rounded-full border border-white/40 uppercase">
         En savoir plus
       </a>
@@ -35,15 +35,15 @@
    
     <div>
       <div class="mx-auto mb-3 flex h-12 w-12 items-center justify-center rounded-full bg-white/20">
-        🏋️
+        ðŸ‹ï¸
       </div>
       <div class="text-3xl text-black font-extrabold">50+</div>
-      <div class="text-sm text-black opacity-90">Équipements modernes</div>
+      <div class="text-sm text-black opacity-90">Ã‰quipements modernes</div>
     </div>
 
     <div>
       <div class="mx-auto mb-3 flex h-12 w-12 items-center justify-center rounded-full bg-white/20">
-        👥
+        ðŸ‘¥
       </div>
       <div class="text-3xl font-extrabold text-black">2,000+</div>
       <div class="text-sm opacity-90 text-black">Membres Power</div>
@@ -52,16 +52,16 @@
    
     <div>
       <div class="mx-auto mb-3 flex h-12 w-12 items-center justify-center rounded-full bg-white/20">
-        🏆
+        ðŸ†
       </div>
       <div class="text-3xl font-extrabold text-black">10+</div>
-      <div class="text-black text-sm opacity-90">Années d’expérience</div>
+      <div class="text-black text-sm opacity-90">AnnÃ©es dâ€™expÃ©rience</div>
     </div>
 
     
     <div>
       <div class="mx-auto mb-3 flex h-12 w-12 items-center justify-center rounded-full bg-white/20">
-        ⭐
+        â­
       </div>
       <div class="text-black text-3xl font-extrabold">4.9/5</div>
       <div class="text-black text-sm opacity-90">Satisfaction client</div>
@@ -81,30 +81,30 @@
 
      
       <div class="bg-lime-500 text-black p-6 rounded-xl">
-        <div class="text-3xl mb-4">🏋️</div>
+        <div class="text-3xl mb-4">ðŸ‹ï¸</div>
         <h3 class="font-bold uppercase mb-2">Construction musculaire</h3>
         <p class="text-sm mb-4">
-          Programmes adaptés pour développer force et masse musculaire.
+          Programmes adaptÃ©s pour dÃ©velopper force et masse musculaire.
         </p>
        
       </div>
 
       
       <div class="bg-lime-500 border  border-white/10 p-6 rounded-xl text-black">
-        <div class="text-3xl mb-4">🔥</div>
-        <h3 class="font-bold  uppercase mb-2">Entraînement intensif</h3>
+        <div class="text-3xl mb-4">ðŸ”¥</div>
+        <h3 class="font-bold  uppercase mb-2">EntraÃ®nement intensif</h3>
         <p class="text-sm  mb-4">
-          Séances HIIT et cardio pour brûler un maximum de calories.
+          SÃ©ances HIIT et cardio pour brÃ»ler un maximum de calories.
         </p>
         
       </div>
 
 
       <div class="bg-lime-500  border border-white/10 p-6  rounded-xl text-black">
-        <div class="text-3xl mb-4">💪</div>
+        <div class="text-3xl mb-4">ðŸ’ª</div>
         <h3 class="font-bold uppercase mb-2">Coachs professionnels</h3>
         <p class="text-sm  mb-4">
-          Un accompagnement personnalisé par des experts certifiés.
+          Un accompagnement personnalisÃ© par des experts certifiÃ©s.
         </p>
         
       </div>
@@ -152,3 +152,4 @@
 </section>
 
 <?php require __DIR__ . "/footer.php"; ?>
+

@@ -1,4 +1,4 @@
-<?php
+﻿<?php
 /**
  * Add User Controller
  *
@@ -13,7 +13,7 @@
 session_start();
 
 if (!isset($_SESSION['role']) || $_SESSION['role'] !== 'admin') {
-    header('Location: /~uapv2600350/admin/login');
+    header('Location: /admin/login');
     exit;
 }
 
@@ -64,7 +64,7 @@ if (!Csrf::verifyToken($_POST['csrf_token'] ?? null)) {
     $model = new UtilisateurModel();
     $model->insert($u);
 
-    header('Location: /~uapv2600350/admin/utilisateurs');
+    header('Location: /admin/utilisateurs');
     exit;
 }
 

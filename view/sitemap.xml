@@ -1,36 +1,36 @@
-<?xml version="1.0" encoding="UTF-8"?>
+﻿<?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
   <url>
-    <loc>https://pedago.univ-avignon.fr/~uapv2600350/accueil</loc>
+    <loc>https://pedago.univ-avignon.fr/accueil</loc>
   </url>
 
   <url>
-    <loc>https://pedago.univ-avignon.fr/~uapv2600350/activites</loc>
+    <loc>https://pedago.univ-avignon.fr/activites</loc>
   </url>
 
   <url>
-    <loc>https://pedago.univ-avignon.fr/~uapv2600350/abonnements</loc>
+    <loc>https://pedago.univ-avignon.fr/abonnements</loc>
   </url>
 
   <url>
-    <loc>https://pedago.univ-avignon.fr/~uapv2600350/contact</loc>
+    <loc>https://pedago.univ-avignon.fr/contact</loc>
   </url>
 
   <url>
-    <loc>https://pedago.univ-avignon.fr/~uapv2600350/faq</loc>
+    <loc>https://pedago.univ-avignon.fr/faq</loc>
   </url>
 
   <url>
-    <loc>https://pedago.univ-avignon.fr/~uapv2600350/login</loc>
+    <loc>https://pedago.univ-avignon.fr/login</loc>
   </url>
 
   <url>
-    <loc>https://pedago.univ-avignon.fr/~uapv2600350/mentions</loc>
+    <loc>https://pedago.univ-avignon.fr/mentions</loc>
   </url>
 
   <url>
-    <loc>https://pedago.univ-avignon.fr/~uapv2600350/cgv</loc>
+    <loc>https://pedago.univ-avignon.fr/cgv</loc>
   </url>
 
 </urlset>

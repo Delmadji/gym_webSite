@@ -1,4 +1,4 @@
-<?php
+﻿<?php
 /**
  * Update Profile Controller
  *
@@ -27,7 +27,7 @@ if (session_status() === PHP_SESSION_NONE) {
 }
 
 if (!isset($_SESSION['user_id'])) {
-    header('Location: /~uapv2600350/login');
+    header('Location: /login');
     exit;
 }
 
@@ -56,12 +56,13 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         $email,
         $ancien->getPasswordHash(),    // on garde le mot de passe actuel
         $telephone,
-        $ancien->getRole(),            // on garde le rôle
-        $ancien->getAbonnementNom()    // on garde le nom de l’abonnement
+        $ancien->getRole(),            // on garde le rÃ´le
+        $ancien->getAbonnementNom()    // on garde le nom de lâ€™abonnement
     );
 
     $model->update($utilisateur);
 
-    header('Location: /~uapv2600350/profil');
+    header('Location: /profil');
     exit;
 }
+

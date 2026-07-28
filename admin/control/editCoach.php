@@ -1,4 +1,4 @@
-<?php
+﻿<?php
 /**
  * Edit Coach Controller
  *
@@ -13,7 +13,7 @@
 session_start();
 
 if (!isset($_SESSION['role']) || $_SESSION['role'] !== 'admin') {
-    header('Location: /~uapv2600350/admin/login');
+    header('Location: /admin/login');
     exit;
 }
 require_once __DIR__ . "/../model/Csrf.php";
@@ -44,7 +44,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $coach = new Coach($id, $nom, $specialite, $description, $image);
     $coachModel->update($coach);
 
-    header('Location: /~uapv2600350/admin/coachs');
+    header('Location: /admin/coachs');
     exit;
 }
 
