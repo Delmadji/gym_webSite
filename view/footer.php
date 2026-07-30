@@ -1,4 +1,4 @@
-﻿<?php
+<?php
 use Model\CookieManager;
 use Model\Csrf;
 ?>
@@ -9,8 +9,8 @@ use Model\Csrf;
     <div>
       <h3 class="text-xl font-extrabold uppercase mb-3 text-lime-500">PowerGym</h3>
       <p class="text-white/70 text-sm">
-        Salle de sport dÃ©diÃ©e Ã  la musculation, au fitness et au bien-Ãªtre.
-        EntraÃ®nez-vous avec des professionnels.
+        Salle de sport dédiée à la musculation, au fitness et au bien-être.
+        Entraînez-vous avec des professionnels.
       </p>
     </div>
 
@@ -18,10 +18,10 @@ use Model\Csrf;
       <h4 class="font-bold uppercase mb-3">Navigation</h4>
       <ul class="space-y-2 text-sm text-white/70">
         <li><a href="/accueil" class="hover:text-lime-400">Accueil</a></li>
-        <li><a href="/activites" class="hover:text-lime-400">ActivitÃ©s</a></li>
+        <li><a href="/activites" class="hover:text-lime-400">Activités</a></li>
         <li><a href="/abonnements" class="hover:text-lime-400">Abonnements</a></li>
         <li><a href="/login" class="hover:text-lime-400">Se connecter</a></li>
-        <li><a href="/mentions" class="hover:text-lime-400">Mentions lÃ©gales</a></li>
+        <li><a href="/mentions" class="hover:text-lime-400">Mentions légales</a></li>
         <li><a href="/cgv" class="hover:text-lime-400">CGV</a></li>
         <li><a href="/sitemap" class="hover:text-lime-400">Plan du site</a></li>
       </ul>
@@ -39,7 +39,7 @@ use Model\Csrf;
   </div>
 
   <div class="border-t border-white/10 py-4 text-center text-sm text-white/60">
-    Â© <?= date("Y") ?> PowerGym â€” Tous droits rÃ©servÃ©s
+    © <?= date("Y") ?> PowerGym — Tous droits réservés
   </div>
 </footer>
 
@@ -48,15 +48,15 @@ use Model\Csrf;
     <div class="max-w-6xl mx-auto flex flex-col gap-4">
 
       <p class="text-sm text-white/80">
-        Nous utilisons des cookies pour amÃ©liorer votre expÃ©rience.
+        Nous utilisons des cookies pour améliorer votre expérience.
       </p>
 
       <p class="text-xs text-white/50">
-        Cookies nÃ©cessaires : indispensables au fonctionnement du site, par exemple la session de connexion et la sÃ©curitÃ© CSRF.
+        Cookies nécessaires : indispensables au fonctionnement du site, par exemple la session de connexion et la sécurité CSRF.
       </p>
 
       <p class="text-xs text-white/50">
-        Cookies optionnels : prÃ©fÃ©rences utilisateur ou statistiques.
+        Cookies optionnels : préférences utilisateur ou statistiques.
       </p>
 
       <form method="post" class="flex gap-2 flex-wrap">
@@ -69,7 +69,7 @@ use Model\Csrf;
 
         <button type="submit" name="cookie_choice" value="necessary"
                 class="px-4 py-2 border border-white/20 rounded-full">
-          NÃ©cessaires seulement
+          Nécessaires seulement
         </button>
 
         <button type="submit" name="cookie_choice" value="refuse"

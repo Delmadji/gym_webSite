@@ -1,4 +1,4 @@
-﻿<?php require __DIR__ . "/header.php"; ?>
+<?php require __DIR__ . "/header.php"; ?>
 
 <main class="pt-24 min-h-screen flex items-center justify-center">
   <div class="w-full max-w-md px-6">

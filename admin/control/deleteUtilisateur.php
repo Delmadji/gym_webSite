@@ -1,4 +1,4 @@
-﻿<?php
+<?php
 /**
  * Delete User Controller
  *

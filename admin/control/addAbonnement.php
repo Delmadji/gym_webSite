@@ -1,4 +1,4 @@
-﻿<?php
+<?php
 /**
  * Add Subscription Controller
  *

@@ -1,4 +1,4 @@
-﻿<?php
+<?php
 require_once __DIR__ . "/../model/Csrf.php";
 use Model\Csrf;
 require __DIR__ . "/header.php"; ?>

@@ -1,4 +1,4 @@
-﻿<?php
+<?php
 require_once __DIR__ . "/../model/CookieManager.php";
 require_once __DIR__ . "/../admin/interface/UtilisateurInterface.php";
 require_once __DIR__ . "/../admin/class/Utilisateur.php";
@@ -72,7 +72,7 @@ if (!isset($utilisateur) && isset($_SESSION['user_id'])) {
 
         <a href="/activites"
            class="text-white/80 hover:text-lime-500 transition">
-           ActivitÃ©s
+           Activités
         </a>
 
         <a href="/abonnements"
@@ -99,7 +99,7 @@ if (!isset($utilisateur) && isset($_SESSION['user_id'])) {
 
           <a href="/deconnexion"
              class="px-4 py-2 border border-white/20 text-white/80 rounded-full hover:border-red-400 hover:text-red-400 transition font-bold">
-            DÃ©connexion
+            Déconnexion
           </a>
 
         <?php else: ?>

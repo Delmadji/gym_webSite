@@ -1,4 +1,4 @@
-﻿<?php
+<?php
 require_once __DIR__ . "/../../model/CookieManager.php";
 require_once __DIR__ . "/../interface/UtilisateurInterface.php";
 require_once __DIR__ . "/../class/Utilisateur.php";
@@ -42,7 +42,7 @@ if (isset($_SESSION['user_id'], $_SESSION['role']) && $_SESSION['role'] === 'adm
     <div class="flex gap-4 text-sm uppercase items-center">
 <a href="/admin/dashboard" class="text-white/70 hover:text-lime-400">Dashboard</a>
 <a href="/admin/coachs" class="text-white/70 hover:text-lime-400">Coachs</a>
-<a href="/admin/activites" class="text-white/70 hover:text-lime-400">ActivitÃ©s</a>
+<a href="/admin/activites" class="text-white/70 hover:text-lime-400">Activités</a>
 <a href="/admin/abonnements" class="text-white/70 hover:text-lime-400">Abonnements</a>
 <a href="/admin/utilisateurs" class="text-white/70 hover:text-lime-400">Utilisateurs</a>
 <a href="/accueil" class="px-3 py-2 rounded-full bg-lime-500 text-black font-bold">Site</a>
@@ -50,7 +50,7 @@ if (isset($_SESSION['user_id'], $_SESSION['role']) && $_SESSION['role'] === 'adm
 <span class="px-3 py-2 rounded-full border border-lime-500 text-lime-400 font-bold">
   <?= htmlspecialchars($adminUtilisateur->getNom()) ?>
 </span>
-<a href="/admin/deconnexion" class="px-3 py-2 rounded-full border border-white/20 text-white/80 hover:border-red-400 hover:text-red-400 font-bold">DÃ©connexion</a>
+<a href="/admin/deconnexion" class="px-3 py-2 rounded-full border border-white/20 text-white/80 hover:border-red-400 hover:text-red-400 font-bold">Déconnexion</a>
 <?php endif; ?>
     </div>
   </div>
