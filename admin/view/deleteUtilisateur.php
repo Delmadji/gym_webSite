@@ -3,6 +3,8 @@
 <?php
 require_once __DIR__ . "/../model/Csrf.php";
 use Model\Csrf;
+
+$utilisateur = $utilisateur ?? null;
 ?>
 
 <main class="pt-24">
@@ -12,9 +14,9 @@ use Model\Csrf;
     <div class="bg-gray-900 border border-white/10 rounded-xl p-6">
       
       <p class="text-white/80 mb-6">
-        Voulez-vous vraiment supprimer 
+        Voulez-vous vraiment supprimer
         <span class="font-bold text-red-400">
-          <?= htmlspecialchars($utilisateur->getNom()) ?>
+          <?= htmlspecialchars($utilisateur?->getNom() ?? 'cet utilisateur') ?>
         </span> ?
       </p>
 
@@ -22,7 +24,7 @@ use Model\Csrf;
       <form action="/admin/deleteUtilisateur" method="post" class="flex gap-4">
 
         <input type="hidden" name="csrf_token" value="<?= htmlspecialchars(Csrf::generateToken()) ?>">
-        <input type="hidden" name="id" value="<?= htmlspecialchars($utilisateur->getId()) ?>">
+        <input type="hidden" name="id" value="<?= htmlspecialchars($utilisateur?->getId() ?? '') ?>">
 
         
         <button type="submit"
