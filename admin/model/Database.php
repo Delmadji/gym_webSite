@@ -2,6 +2,8 @@
 
 namespace Model;
 
+require_once __DIR__ . '/exceptions/NotFoundException.php';
+
 use PDO;
 use PDOException;
 use Model\Exceptions\NotFoundException;

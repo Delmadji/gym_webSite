@@ -2,8 +2,11 @@
 
 namespace Model;
 
+require_once __DIR__ . '/Database.php';
+
 use PDO;
 use ClassApp\Activite;
+use Model\Database;
 
 /**
  * ActiviteModel

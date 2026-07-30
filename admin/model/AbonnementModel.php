@@ -2,8 +2,11 @@
 
 namespace Model;
 
+require_once __DIR__ . '/Database.php';
+
 use PDO;
 use ClassApp\Abonnement;
+use Model\Database;
 
 /**
  * AbonnementModel

@@ -7,6 +7,7 @@ require_once __DIR__ . "/../admin/model/UtilisateurModel.php";
 
 use Model\CookieManager;
 use Model\UtilisateurModel;
+use Model\Exceptions\NotFoundException;
 
 CookieManager::handleConsent();
 
@@ -14,12 +15,21 @@ if (session_status() === PHP_SESSION_NONE) {
     session_start();
 }
 
-if (!isset($utilisateur) && isset($_SESSION['user_id'])) {
-    $utilisateurModel = new UtilisateurModel();
-    $utilisateur = $utilisateurModel->getById((int) $_SESSION['user_id']);
+$utilisateur = $utilisateur ?? null;
 
-    if (!$utilisateur) {
-        unset($_SESSION['user_id'], $_SESSION['role']);
+if (!isset($utilisateur) && isset($_SESSION['user_id'])) {
+    try {
+        $utilisateurModel = new UtilisateurModel();
+        $utilisateur = $utilisateurModel->getById((int) $_SESSION['user_id']);
+
+        if (!$utilisateur) {
+            unset($_SESSION['user_id'], $_SESSION['role']);
+            $utilisateur = null;
+        }
+    } catch (NotFoundException $e) {
+        $utilisateur = null;
+    } catch (Throwable $e) {
+        $utilisateur = null;
     }
 }
 ?>

@@ -1,4 +1,9 @@
-﻿<footer class="bg-black border-t border-white/10 mt-16">
+﻿<?php
+use Model\CookieManager;
+use Model\Csrf;
+?>
+
+<footer class="bg-black border-t border-white/10 mt-16">
   <div class="max-w-6xl mx-auto px-6 py-10 grid grid-cols-1 md:grid-cols-3 gap-8">
 
     <div>
@@ -38,7 +43,7 @@
   </div>
 </footer>
 
-<?php if (!\Model\CookieManager::hasChoice()): ?>
+<?php if (!CookieManager::hasChoice()): ?>
   <div class="fixed bottom-0 left-0 w-full bg-gray-900 border-t border-white/10 text-white p-4 z-50">
     <div class="max-w-6xl mx-auto flex flex-col gap-4">
 
@@ -55,7 +60,7 @@
       </p>
 
       <form method="post" class="flex gap-2 flex-wrap">
-        <input type="hidden" name="csrf_token" value="<?= htmlspecialchars(\Model\Csrf::generateToken()) ?>">
+        <input type="hidden" name="csrf_token" value="<?= htmlspecialchars(Csrf::generateToken()) ?>">
 
         <button type="submit" name="cookie_choice" value="all"
                 class="px-4 py-2 bg-lime-500 text-black font-bold rounded-full">

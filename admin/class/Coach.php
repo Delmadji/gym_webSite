@@ -1,8 +1,8 @@
-<?php
+﻿<?php
 
 namespace ClassApp;
 
-use InterfaceApp\CoachInterface;
+use InterfaceApp\\CoachInterface;
 
 /**
  * Coach
