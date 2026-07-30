@@ -1,7 +1,10 @@
-<?php require __DIR__ . "/header.php"; ?>
-<?php require_once __DIR__ . "/../model/Csrf.php";
-use Model\Csrf; ?>
+<?php
+require __DIR__ . "/header.php";
+require_once __DIR__ . "/../model/Csrf.php";
+use Model\Csrf;
 
+$coach = $coach ?? null;
+?>
 
 <main class="pt-24">
   <div class="max-w-4xl mx-auto px-6">
@@ -10,29 +13,29 @@ use Model\Csrf; ?>
     <form action="/admin/editCoach" method="post"
           class="bg-gray-900 border border-white/10 rounded-xl p-6 space-y-4">
        <input type="hidden" name="csrf_token" value="<?= htmlspecialchars(Csrf::generateToken()) ?>">
-      <input type="hidden" name="id" value="<?= htmlspecialchars($coach->getId()) ?>">
+      <input type="hidden" name="id" value="<?= htmlspecialchars($coach ? $coach->getId() : '') ?>">
 
       <div>
         <label class="block text-sm text-white/70 mb-1">Nom</label>
-        <input type="text" name="nom" value="<?= htmlspecialchars($coach->getNom()) ?>"
+        <input type="text" name="nom" value="<?= htmlspecialchars($coach ? $coach->getNom() : '') ?>"
                class="w-full px-4 py-3 rounded-lg bg-black/40 border border-white/10" required>
       </div>
 
       <div>
-        <label class="block text-sm text-white/70 mb-1">SpÃ©cialitÃ©</label>
-        <input type="text" name="specialite" value="<?= htmlspecialchars($coach->getSpecialite()) ?>"
+        <label class="block text-sm text-white/70 mb-1">Spécialité</label>
+        <input type="text" name="specialite" value="<?= htmlspecialchars($coach ? $coach->getSpecialite() : '') ?>"
                class="w-full px-4 py-3 rounded-lg bg-black/40 border border-white/10" required>
       </div>
 
       <div>
         <label class="block text-sm text-white/70 mb-1">Description</label>
         <textarea name="description"
-                  class="w-full px-4 py-3 rounded-lg bg-black/40 border border-white/10" required><?= htmlspecialchars($coach->getDescription()) ?></textarea>
+                  class="w-full px-4 py-3 rounded-lg bg-black/40 border border-white/10" required><?= htmlspecialchars($coach ? $coach->getDescription() : '') ?></textarea>
       </div>
 
       <div>
         <label class="block text-sm text-white/70 mb-1">Image</label>
-        <input type="text" name="image" value="<?= htmlspecialchars($coach->getImage()) ?>"
+        <input type="text" name="image" value="<?= htmlspecialchars($coach ? $coach->getImage() : '') ?>"
                class="w-full px-4 py-3 rounded-lg bg-black/40 border border-white/10" required>
       </div>
 
