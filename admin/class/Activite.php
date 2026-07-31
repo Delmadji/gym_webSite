@@ -2,7 +2,7 @@
 
 namespace ClassApp;
 
-use InterfaceApp\ActiviteInterface;
+require_once __DIR__ . '/../interface/ActiviteInterface.php';
 
 /**
  * Activite
@@ -14,7 +14,7 @@ use InterfaceApp\ActiviteInterface;
  * @package ClassApp
  * @version 1.0
  */
-class Activite implements ActiviteInterface
+class Activite implements \InterfaceApp\ActiviteInterface
 {
     /**
      * @var int|null The unique activity ID

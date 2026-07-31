@@ -2,7 +2,7 @@
 
 namespace ClassApp;
 
-use InterfaceApp\AbonnementInterface;
+require_once __DIR__ . '/../interface/AbonnementInterface.php';
 
 /**
  * Abonnement
@@ -14,7 +14,7 @@ use InterfaceApp\AbonnementInterface;
  * @package ClassApp
  * @version 1.0
  */
-class Abonnement implements AbonnementInterface
+class Abonnement implements \InterfaceApp\AbonnementInterface
 {
     /**
      * @var int|null The unique subscription ID

@@ -2,7 +2,7 @@
 
 namespace ClassApp;
 
-use InterfaceApp\\CoachInterface;
+require_once __DIR__ . '/../interface/CoachInterface.php';
 
 /**
  * Coach
@@ -14,7 +14,7 @@ use InterfaceApp\\CoachInterface;
  * @package ClassApp
  * @version 1.0
  */
-class Coach implements CoachInterface
+class Coach implements \InterfaceApp\CoachInterface
 {
     /**
      * @var int|null The unique coach ID

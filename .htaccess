@@ -3,6 +3,7 @@ RewriteEngine On
 RewriteBase /
 
 # FRONT
+RewriteRule ^$ index.php [L]
 RewriteRule ^accueil/?$ control/accueil.php [L]
 RewriteRule ^activites/?$ control/activites.php [L]
 RewriteRule ^abonnements/?$ control/abonnements.php [L]
@@ -27,7 +28,7 @@ RewriteRule ^admin/activites/?$ admin/control/activites.php [L]
 RewriteRule ^admin/abonnements/?$ admin/control/abonnements.php [L]
 RewriteRule ^admin/utilisateurs/?$ admin/control/utilisateurs.php [L]
 
-# ADMIN si .php est tapÃ©
+# ADMIN si .php est tapé
 RewriteRule ^admin/login\.php$ admin/control/login.php [L]
 RewriteRule ^admin/logout\.php$ admin/control/logout.php [L]
 RewriteRule ^admin/dashboard\.php$ admin/control/dashboard.php [L]
@@ -54,4 +55,9 @@ RewriteRule ^admin/deleteAbonnement/?$ admin/control/deleteAbonnement.php [L]
 RewriteRule ^admin/addUtilisateur/?$ admin/control/addUtilisateur.php [L]
 RewriteRule ^admin/editUtilisateur/?$ admin/control/editUtilisateur.php [L]
 RewriteRule ^admin/deleteUtilisateur/?$ admin/control/deleteUtilisateur.php [L]
+
+# Fallback global
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule . index.php [L]
 

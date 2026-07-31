@@ -2,7 +2,7 @@
 
 namespace ClassApp;
 
-use InterfaceApp\UtilisateurInterface;
+require_once __DIR__ . '/../interface/UtilisateurInterface.php';
 
 /**
  * Utilisateur
@@ -14,7 +14,7 @@ use InterfaceApp\UtilisateurInterface;
  * @package ClassApp
  * @version 1.0
  */
-class Utilisateur implements UtilisateurInterface
+class Utilisateur implements \InterfaceApp\UtilisateurInterface
 {
     /**
      * @var int|null The unique user ID
