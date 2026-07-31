@@ -1,8 +1,57 @@
-Options -Indexes
-DirectoryIndex index.php index.html
+Options -MultiViews
+RewriteEngine On
+RewriteBase /
 
-<IfModule mod_rewrite.c>
-    RewriteEngine On
-    RewriteRule ^$ /index.html [L]
-</IfModule>
+# FRONT
+RewriteRule ^accueil/?$ control/accueil.php [L]
+RewriteRule ^activites/?$ control/activites.php [L]
+RewriteRule ^abonnements/?$ control/abonnements.php [L]
+RewriteRule ^contact/?$ control/contact.php [L]
+RewriteRule ^faq/?$ control/faq.php [L]
+RewriteRule ^login/?$ control/login.php [L]
+RewriteRule ^logout/?$ control/logout.php [L]
+RewriteRule ^deconnexion/?$ control/logout.php [L]
+RewriteRule ^profil/?$ control/profil.php [L]
+RewriteRule ^updateProfil/?$ control/updateProfil.php [L]
+RewriteRule ^mentions/?$ view/mentions.php [L]
+RewriteRule ^cgv/?$ view/cgv.php [L]
+RewriteRule ^sitemap/?$ view/sitemap.php [L]
+
+# ADMIN propres
+RewriteRule ^admin/login/?$ admin/control/login.php [L]
+RewriteRule ^admin/logout/?$ admin/control/logout.php [L]
+RewriteRule ^admin/deconnexion/?$ admin/control/logout.php [L]
+RewriteRule ^admin/dashboard/?$ admin/control/dashboard.php [L]
+RewriteRule ^admin/coachs/?$ admin/control/coachs.php [L]
+RewriteRule ^admin/activites/?$ admin/control/activites.php [L]
+RewriteRule ^admin/abonnements/?$ admin/control/abonnements.php [L]
+RewriteRule ^admin/utilisateurs/?$ admin/control/utilisateurs.php [L]
+
+# ADMIN si .php est tapÃ©
+RewriteRule ^admin/login\.php$ admin/control/login.php [L]
+RewriteRule ^admin/logout\.php$ admin/control/logout.php [L]
+RewriteRule ^admin/dashboard\.php$ admin/control/dashboard.php [L]
+RewriteRule ^admin/coachs\.php$ admin/control/coachs.php [L]
+RewriteRule ^admin/activites\.php$ admin/control/activites.php [L]
+RewriteRule ^admin/abonnements\.php$ admin/control/abonnements.php [L]
+RewriteRule ^admin/utilisateurs\.php$ admin/control/utilisateurs.php [L]
+# ADMIN actions coachs
+RewriteRule ^admin/addCoach/?$ admin/control/addCoach.php [L]
+RewriteRule ^admin/editCoach/?$ admin/control/editCoach.php [L]
+RewriteRule ^admin/deleteCoach/?$ admin/control/deleteCoach.php [L]
+
+# ADMIN actions activites
+RewriteRule ^admin/addActivite/?$ admin/control/addActivite.php [L]
+RewriteRule ^admin/editActivite/?$ admin/control/editActivite.php [L]
+RewriteRule ^admin/deleteActivite/?$ admin/control/deleteActivite.php [L]
+
+# ADMIN actions abonnements
+RewriteRule ^admin/addAbonnement/?$ admin/control/addAbonnement.php [L]
+RewriteRule ^admin/editAbonnement/?$ admin/control/editAbonnement.php [L]
+RewriteRule ^admin/deleteAbonnement/?$ admin/control/deleteAbonnement.php [L]
+
+# ADMIN actions utilisateurs
+RewriteRule ^admin/addUtilisateur/?$ admin/control/addUtilisateur.php [L]
+RewriteRule ^admin/editUtilisateur/?$ admin/control/editUtilisateur.php [L]
+RewriteRule ^admin/deleteUtilisateur/?$ admin/control/deleteUtilisateur.php [L]
 
