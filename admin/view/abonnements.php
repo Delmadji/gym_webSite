@@ -1,4 +1,4 @@
-<?php require __DIR__ . "/header.php"; ?>
+﻿<?php require __DIR__ . "/header.php"; ?>
 
 <main class="pt-24">
   <div class="max-w-6xl mx-auto px-6">
@@ -23,7 +23,7 @@
               <th class="text-left p-4">ID</th>
               <th class="text-left p-4">Nom</th>
               <th class="text-left p-4">Prix</th>
-              <th class="text-left p-4">DurÃ©e</th>
+              <th class="text-left p-4">DurÃƒÂ©e</th>
               <th class="text-left p-4">Services</th>
               <th class="text-left p-4">Actions</th>
             </tr>
@@ -39,7 +39,7 @@
                 </td>
 
                 <td class="p-4 text-lime-400 font-extrabold">
-                  <?= htmlspecialchars($a->getPrix()) ?> â‚¬ / mois
+                  <?= htmlspecialchars($a->getPrix()) ?> Ã¢â€šÂ¬ / mois
                 </td>
 
                 <td class="p-4 text-white/70">
@@ -75,3 +75,4 @@
 </main>
 
 <?php require __DIR__ . "/footer.php"; ?>
+

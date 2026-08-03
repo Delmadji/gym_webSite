@@ -1,4 +1,4 @@
-<?php require __DIR__ . "/header.php"; ?>
+﻿<?php require __DIR__ . "/header.php"; ?>
 
 <main class="pt-24">
   <div class="max-w-6xl mx-auto px-6">
@@ -22,7 +22,7 @@
               <th class="text-left p-4">ID</th>
               
               <th class="text-left p-4">Nom</th>
-              <th class="text-left p-4">SpÃ©cialitÃ©</th>
+              <th class="text-left p-4">Spécialité</th>
               <th class="text-left p-4">Description</th>
               <th class="text-left p-4">Actions</th>
             </tr>
@@ -76,3 +76,5 @@
 </main>
 
 <?php require __DIR__ . "/footer.php"; ?>
+
+

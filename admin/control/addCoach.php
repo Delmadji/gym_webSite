@@ -21,14 +21,16 @@ require_once __DIR__ . '/../interface/CoachInterface.php';
 require_once __DIR__ . '/../class/Coach.php';
 require_once __DIR__ . '/../model/Database.php';
 require_once __DIR__ . '/../model/CoachModel.php';
+require_once __DIR__ . '/../model/Csrf.php';
 
 use ClassApp\Coach;
 use Model\CoachModel;
-if (!Csrf::verifyToken($_POST['csrf_token'] ?? null)) {
-    die("Erreur CSRF : formulaire invalide.");
-}
+use Model\Csrf;
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+    if (!Csrf::verifyToken($_POST['csrf_token'] ?? null)) {
+        die("Erreur CSRF : formulaire invalide.");
+    }
     $nom = $_POST['nom'] ?? '';
     $specialite = $_POST['specialite'] ?? '';
     $description = $_POST['description'] ?? '';

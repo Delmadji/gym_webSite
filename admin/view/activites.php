@@ -1,11 +1,11 @@
-<?php require __DIR__ . "/header.php"; ?>
+﻿<?php require __DIR__ . "/header.php"; ?>
 
 <main class="pt-24">
   <div class="max-w-6xl mx-auto px-6">
 
     <div class="flex justify-between items-center mb-8">
       <h1 class="text-3xl font-extrabold uppercase">
-        Gestion des activitÃ©s
+        Gestion des activitÃƒÂ©s
       </h1>
 
       <a href="/admin/addActivite"
@@ -79,3 +79,4 @@
 </main>
 
 <?php require __DIR__ . "/footer.php"; ?>
+

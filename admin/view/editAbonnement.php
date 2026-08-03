@@ -1,4 +1,4 @@
-<?php 
+﻿<?php 
 require __DIR__ . "/header.php";
 
 require_once __DIR__ . "/../model/Csrf.php";
@@ -13,7 +13,7 @@ use Model\Csrf;
       <form action="/admin/editAbonnement" method="post"
             class="bg-gray-900 border border-white/10 rounded-xl p-6 space-y-4">
 
-        <!-- ðŸ”¥ CSRF TOKEN (MANQUANT AVANT) -->
+        <!-- Ã°Å¸â€Â¥ CSRF TOKEN (MANQUANT AVANT) -->
         <input type="hidden" name="csrf_token" value="<?= htmlspecialchars(Csrf::generateToken()) ?>">
 
         <input type="hidden" name="id" value="<?= htmlspecialchars($abonnement->getId()) ?>">
@@ -33,7 +33,7 @@ use Model\Csrf;
         </div>
 
         <div>
-          <label class="block text-sm text-white/70 mb-1">DurÃ©e</label>
+          <label class="block text-sm text-white/70 mb-1">DurÃƒÂ©e</label>
           <input type="text" name="duree"
                  value="<?= htmlspecialchars($abonnement->getDuree()) ?>"
                  class="w-full px-4 py-3 rounded-lg bg-black/40 border border-white/10" required>
@@ -59,3 +59,4 @@ use Model\Csrf;
 </main>
 
 <?php require __DIR__ . "/footer.php"; ?>
+

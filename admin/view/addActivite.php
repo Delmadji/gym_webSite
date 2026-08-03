@@ -1,11 +1,11 @@
-<?php require __DIR__ . "/header.php"; ?>
+﻿<?php require __DIR__ . "/header.php"; ?>
 <?php require_once __DIR__ . "/../model/Csrf.php";
 use Model\Csrf; ?>
 
 
 <main class="pt-24">
   <div class="max-w-4xl mx-auto px-6">
-    <h1 class="text-3xl font-extrabold uppercase mb-6">Ajouter une activitÃ©</h1>
+    <h1 class="text-3xl font-extrabold uppercase mb-6">Ajouter une activitÃƒÂ©</h1>
 
     <form action="/admin/addActivite" method="post"
           class="bg-gray-900 border border-white/10 rounded-xl p-6 space-y-4">
@@ -50,3 +50,4 @@ use Model\Csrf; ?>
 </main>
 
 <?php require __DIR__ . "/footer.php"; ?>
+

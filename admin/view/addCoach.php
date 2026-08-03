@@ -1,4 +1,4 @@
-<?php require __DIR__ . "/header.php"; ?>
+﻿<?php require __DIR__ . "/header.php"; ?>
 <?php require_once __DIR__ . "/../model/Csrf.php";
 use Model\Csrf; ?>
 
@@ -16,7 +16,7 @@ use Model\Csrf; ?>
       </div>
 
       <div>
-        <label class="block text-sm text-white/70 mb-1">SpÃ©cialitÃ©</label>
+        <label class="block text-sm text-white/70 mb-1">Spécialité</label>
         <input type="text" name="specialite"
                class="w-full px-4 py-3 rounded-lg bg-black/40 border border-white/10" required>
       </div>
@@ -43,3 +43,5 @@ use Model\Csrf; ?>
 </main>
 
 <?php require __DIR__ . "/footer.php"; ?>
+
+
